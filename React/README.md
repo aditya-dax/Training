@@ -1,3 +1,8 @@
+# A Basic blog app using React
+
+React Assignment
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

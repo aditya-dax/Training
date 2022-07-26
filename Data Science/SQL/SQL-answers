@@ -1,0 +1,15 @@
+--SELECT CustomerId, FirstName, LastName, City FROM customers WHERE (FirstName LIKE 'N%' OR City == 'Paris') ;
+
+--SELECT TrackId, Name, Composer, UnitPrice FROM tracks WHERE UnitPrice BETWEEN 0 AND 1 ;
+
+--SELECT InvoiceDate, SUM(Total), AVG(Total) FROM invoices WHERE InvoiceDate BETWEEN '2012-06-01 00:00:00' AND '2012-06-30 00:00:00' GROUP BY InvoiceDate ;
+ 
+--SELECT TrackId, COUNT(Quantity) FROM invoice_items GROUP BY TrackId ORDER BY COUNT(Quantity) DESC ;
+
+SELECT AlbumId FROM tracks WHERE AblumId NOT IN (
+SELECT AlbumId
+FROM playlist_track
+LEFT JOIN tracks
+ON playlist_track.TrackId = tracks.TrackId)
+
+
